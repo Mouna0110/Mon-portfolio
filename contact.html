@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Mon Portfolio - Accueil</title>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Accueil</a> | 
+        <a href="projets.html">Mes Projets</a> | 
+        <a href="propos.html">À propos</a> | 
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <hr>
+
+    <h1>Contactez-moi</h1>
+    <p>Je suis actuellement à la recherche d'un stage de perfectionnement en finance. N'hésitez pas à me contacter pour échanger sur mon profil ou mes projets.</p>
+
+    <ul>
+        <li><strong>Téléphone :</strong> 07 88 25 98 02 / 01 73 81 80 86</li>
+        <li><strong>Email :</strong> mounalago7@gmail.com</li>
+        <li><strong>Localisation :</strong> Yopougon, Abidjan</li>
+    </ul>
+
+    <hr>
+
+    <h3>M'envoyer un message</h3>
+    <form id="contactForm">
+        <p>
+            <label>Nom :</label><br>
+            <input type="text" id="nom" required>
+        </p>
+        <p>
+            <label>Email :</label><br>
+            <input type="email" id="email" required>
+        </p>
+        <p>
+            <label>Message :</label><br>
+            <textarea id="message" rows="4"></textarea>
+        </p>
+        <button type="submit">Envoyer</button>
+    </form>
+
+    <p id="confirmation" style="color: green; display: none;">Merci ! Votre message a bien été envoyé (simulation).</p>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
