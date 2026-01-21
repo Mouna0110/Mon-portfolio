@@ -2,36 +2,63 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouna Portfolio - Accueil</title>
     <link rel="stylesheet" href="style.css">
-    <title>Mon Portfolio - Accueil</title>
 </head>
 <body>
 
     <nav>
-        <a href="index.html">Accueil</a> | 
-        <a href="projets.html">Mes Projets</a> | 
-        <a href="propos.html">À propos</a> | 
+        <a href="index.html">Accueil</a>
+        <a href="propos.html">À propos</a>
+        <a href="projets.html">Projets</a>
         <a href="contact.html">Contact</a>
     </nav>
 
-    <hr>
+    <header class="hero">
+        <div class="hero-text">
+            <h1>Je suis <span>Mouna Martine LAGO</span></h1>
+            <p>Étudiante en Master 2 Finance & Apprenante D-CLIC</p>
+            <a href="projets.html" class="btn-principal">Voir mes projets</a>
+        </div>
+    </header>
 
-    <div style="text-align: center; margin-top: 20px;">
-        <img src="Profil.jpg" alt="Photo de Mouna" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid #2c3e50;">
+    <div class="container">
+        
+        <section class="section-accueil">
+            <div class="presentation-flex">
+                <div class="texte-intro">
+                    <h2>À propos</h2>
+                    <p>Future professionnelle de la finance, je combine mes connaissances théoriques avec les outils numériques pour relever les défis de demain.</p>
+                    <a href="propos.html" class="btn-secondaire">En savoir plus</a>
+                </div>
+                <div class="image-box">
+                    <img src="Profil.jpg" alt="Mouna" class="photo-ronde">
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="section-accueil">
+            <h2>Mes Compétences Clés</h2>
+            <div class="preview-skills">
+                <div class="skill-mini">
+                    <span>Finance</span>
+                    <div class="barre-vide"><div class="barre-remplie finance"></div></div>
+                </div>
+                <div class="skill-mini">
+                    <span>Excel</span>
+                    <div class="barre-vide"><div class="barre-remplie excel"></div></div>
+                </div>
+                <div class="skill-mini">
+                    <span>Web</span>
+                    <div class="barre-vide"><div class="barre-remplie web"></div></div>
+                </div>
+            </div>
+        </section>
+
     </div>
 
-    <h1 style="text-align: center;">LAGO Mouna Martine Djédjé</h1>
-    
-    <p style="text-align: center; font-size: 1.2em;">
-        <strong>Étudiante en Master 2 Finance | Apprenante en Développement Web</strong>
-    </p>
-
-    <div style="max-width: 800px; margin: 0 auto; padding: 20px;">
-        <p>Bienvenue sur mon portfolio professionnel !</p>
-        <p>Actuellement en <strong>Master 2 Finance</strong>, j'ai saisi l'opportunité de la formation <strong>D-CLIC</strong> pour acquérir des compétences techniques. Ce site est le reflet de ma double compétence : la rigueur de l'analyse financière et mon initiation au monde du numérique.</p>
-        <p>Je vous invite à explorer mes différentes pages pour découvrir mon parcours et mes projets.</p>
-    </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
