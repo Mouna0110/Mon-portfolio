@@ -2,51 +2,60 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Mouna Martine Djédjé LAGO</title>
     <link rel="stylesheet" href="style.css">
-    <title>Mon Portfolio - Accueil</title>
 </head>
 <body>
-
     <nav>
-        <a href="index.html">Accueil</a> | 
-        <a href="projets.html">Mes Projets</a> | 
-        <a href="propos.html">À propos</a> | 
+        <a href="index.html">Accueil</a>
+        <a href="propos.html">À propos</a>
+        <a href="projets.html">Projets</a>
         <a href="contact.html">Contact</a>
     </nav>
 
-    <hr>
+    <div class="container">
+        <h1 class="page-title">Me contacter</h1>
 
-    <h1>Contactez-moi</h1>
-    <p>Je suis actuellement à la recherche d'un stage de perfectionnement en finance. N'hésitez pas à me contacter pour échanger sur mon profil ou mes projets.</p>
+        <section class="card-mini">
 
-    <ul>
-        <li><strong>Téléphone :</strong> 07 88 25 98 02 / 01 73 81 80 86</li>
-        <li><strong>Email :</strong> mounalago7@gmail.com</li>
-        <li><strong>Localisation :</strong> Yopougon, Abidjan</li>
-    </ul>
+        <h3 class="title-mini">Coordonnées</h3>
+            <div class="contact-list">
+                <p><strong>📍 Localisation :</strong> Yopougon, Abidjan, Côte d'Ivoire</p>    
+                <p><strong>📧 Email :</strong>     <a href="mailto:mounalago7@gmail.com" class="link-or">mounalago7@gmail.com</a>               </p>    
+                <p><strong>📞 Téléphone :</strong> +225 07 88 25 98 02 / 01 73 81 80 86</p>
+            </div>                                        
+            
+            <span class="badge">Disponible</span>
+        </section>
 
-    <hr>
+        <section class="card-mini">
+            <h3 class="title-mini">Réseaux Sociaux</h3>
+            <div class="contact-list">
+            <p><strong>LinkedIn :</strong> <a href=" " target="_blank" class="link-or">Mouna LAGO </a></p>
+            <p><strong>GitHub :</strong> <a href="https://mouna0110.github.io/Mon-portfolio/propos.html" target="_blank" class="link-or">https://mouna0110.github.io/Mon-portfolio/propos.html</a></p>
+            </div>
+            <span class="badge">Professionnel</span>
+        </section>
 
-    <h3>M'envoyer un message</h3>
-    <form id="contactForm">
-        <p>
-            <label>Nom :</label><br>
-            <input type="text" id="nom" required>
-        </p>
-        <p>
-            <label>Email :</label><br>
-            <input type="email" id="email" required>
-        </p>
-        <p>
-            <label>Message :</label><br>
-            <textarea id="message" rows="4"></textarea>
-        </p>
-        <button type="submit">Envoyer</button>
-    </form>
-
-    <p id="confirmation" style="color: green; display: none;">Merci ! Votre message a bien été envoyé (simulation).</p>
-
-    <script src="script.js"></script>
-
+        <section class="card-mini">
+            <h3 class="title-mini">Envoyer un message</h3>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label>Nom Complet</label>
+                    <input type="text" placeholder="Votre nom et prénom">
+                </div>
+                <div class="form-group">
+                    <label>Votre Email</label>
+                    <input type="email" placeholder="votre@email.com">
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea placeholder="Bonjour Mouna, j'aimerais vous contacter pour..."></textarea>
+                </div>
+                <button type="submit" class="btn-or">Envoyer le message</button>
+            </form>
+        </section>
+    </div>
 </body>
-</html>
+</html>         
