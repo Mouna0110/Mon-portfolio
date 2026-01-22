@@ -3,23 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mouna Martine LAGO - Accueil</title>
+    <title>Mouna Martine Djédjé LAGO - Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav>
-        <a href="index.html">Accueil</a>
-        <a href="propos.html">À propos</a>
-        <a href="projets.html">Projets</a>
-        <a href="contact.html">Contact</a>
+        <div class="nav-container">
+            <div class="logo">MOUNA MARTINE Djédjé LAGO</div>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="propos.html">À propos</a>
+                <a href="projets.html">Projets</a>
+                <a href="#competences">Compétences</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
     </nav>
 
     <header class="hero">
         <div class="hero-flex">
             <div class="hero-text">
-            <h1>Je suis <span>Mouna Martine Djédjé LAGO</span></h1>  
-            <p>Titulaire d’une maîtrise en Sciences Économiques et de Gestion, option Finance, obtenue à l’Université Félix Houphouët-Boigny d’Abidjan, je poursuis actuellement un Master 2 dans le même domaine. Parallèlement, je suis apprenante au programme D-CLIC, où je suis une formation en développement web (niveau débutant).</p> 
+                <h1>Je suis <span>Mouna Martine Djédjé </span></h1>
+                <p>Titulaire d'une maîtrise en Sciences Économiques et de Gestion, option Finance, obtenue à l'Université Félix Houphouët-Boigny d'Abidjan, je poursuis actuellement un Master 2 dans le même domaine. Parallèlement, je suis apprenante au programme D-CLIC, où je suis une formation en développement web (niveau débutant).</p>
                 <a href="projets.html" class="btn-or">Voir mes projets</a>
             </div>
             <img src="Profil.jpg" alt="Mouna Martine LAGO" class="img-circle-right">
@@ -27,41 +33,70 @@
     </header>
 
     <div class="container">
-        
         <section class="card">
             <h2 class="title-section">À propos</h2>
-            <p>Future professionnelle de la finance, je combine mes connaissances théoriques avec les outils numériques pour relever les défis de ce domaine.</p>
-            <div style="text-align: right; margin-top: 15px;">
-                <a href="propos.html" class="btn-or">En savoir plus</a>
+            <p>Future professionnelle de la finance, je combine mes connaissances théoriques avec les outils numériques pour relever les défis de demain.</p>
+            <div class="about-footer">
+                <a href="CV-Mouna.pdf" download class="btn-cv-small">Télécharger mon CV</a>
+                <a href="propos.html" class="link-or">En savoir plus →</a>
             </div>
         </section>
 
-        <section class="card">
-            <h2 class="title-section">Expertise & Atouts</h2>
-            <div class="skill-item">
-                <span>Analyse Financière & Comptabilité (90%)</span>
-                <div class="progress-bg"><div class="progress-bar finance"></div></div>
-            </div>
-            <div class="skill-item">
-                <span>Microsoft Excel (Maîtrise avancée) (85%)</span>
-                <div class="progress-bg"><div class="progress-bar excel"></div></div>
-            </div>
-            <div class="skill-item">
-                <span>Développement Web (HTML/CSS) (70%)</span>
-                <div class="progress-bg"><div class="progress-bar web"></div></div>
+        <section id="competences" class="card-skills">
+            <h2 class="title-section-center">Mes <span>Compétences</span></h2>
+            <div class="skills-container">
+                <div class="skill-column">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-bar-item"><label>Analyse Financière</label><div class="bar-bg"><div class="bar-fill" style="width:90%"></div></div></div>
+                    <div class="skill-bar-item"><label>Gestion de projet</label><div class="bar-bg"><div class="bar-fill" style="width:85%"></div></div></div>
+                    <div class="skill-bar-item"><label>Adaptabilité</label><div class="bar-bg"><div class="bar-fill" style="width:80%"></div></div></div>
+                </div>
+                <div class="skill-column">
+                    <h3>Hard Skills</h3>
+                    <div class="skill-bar-item"><label>Microsoft Excel</label><div class="bar-bg"><div class="bar-fill" style="width:95%"></div></div></div>
+                    <div class="skill-bar-item"><label>HTML / CSS</label><div class="bar-bg"><div class="bar-fill" style="width:75%"></div></div></div>
+                    <div class="skill-bar-item"><label>JavaScript</label><div class="bar-bg"><div class="bar-fill" style="width:60%"></div></div></div>
+                </div>
             </div>
         </section>
 
-        <section class="card">
-            <h2 class="title-section">Parcours & Certifications</h2>
-            <ul>
-                <li><strong>Master II Finance :</strong> Université Félix Houphouët-Boigny (En cours)</li>
-                <li><strong>MTN Skills Academy :</strong> Recherche d'emploi et gestion de projet</li>
-                <li><strong>ImpactHER & AU-CIEFFA :</strong> Compétences numériques (2025)</li>
-            </ul>
+        <section class="card-projects">
+            <h2 class="title-section-center">Mes <span>Projets</span></h2>
+            <div class="projects-grid">
+                <div class="project-item"><h3>Mon Portfolio</h3><p>Site vitrine HTML/CSS</p><a href="projets.html" class="btn-project">Voir</a></div>
+                <div class="project-item"><h3>Analyse Finance</h3><p>Audit de rentabilité</p><a href="projets.html" class="btn-project">Voir</a></div>
+                <div class="project-item"><h3>Gestion Excel</h3><p>Dashboard automatisé</p><a href="projets.html" class="btn-project">Voir</a></div>
+            </div>
         </section>
 
+        
+        <section class="card-contact-wireframe">
+
+                <div class="contact-header-theme">
+               <h2>La rigueur de la Finance au service du <span class="text-or">Digital</span></h2>
+               <p>Prête à relever vos défis avec <span class="text-or">précision et agilité</span></p>
+                    </div>                
+                    <form class="wireframe-form-theme">
+                <div class="form-row">
+                    <div class="form-group-half"><label>Prénom</label><input type="text" placeholder="Martine"></div>
+                    <div class="form-group-half"><label>Nom</label><input type="text" placeholder="LAGO"></div>
+                </div>
+                <div class="form-group-full"><label>Sujet</label><input type="text" placeholder="Objet de votre message"></div>
+                <div class="form-group-full"><label>Message</label><textarea placeholder="Votre message..."></textarea></div>
+                <div style="text-align: center;"><button type="submit" class="btn-contact-or">Envoyer</button></div>
+            </form>
+        </section>
     </div>
+
+    <footer class="footer-wireframe">
+        <div class="footer-content">          
+                <p>Designed by <span>Mouna Martine LAGO</span> with HTML CSS JS  </p>
+            <div class="footer-contacts">
+                <a href="mailto:mounalago7@gmail.com">Email</a>
+                <a href="https://linkedin.com/in/mouna-martine-lago-djédjé-1721512b9" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>

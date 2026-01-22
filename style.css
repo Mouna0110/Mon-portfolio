@@ -1,163 +1,277 @@
-/* --- 1. VARIABLES ET BASE --- */
 :root {
     --marine: #1a2a3a;
     --or: #d4af37;
     --fond: #f4f7f6;
 }
 
-body { 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    background-color: var(--fond); 
-    margin: 0; 
-    color: #333; 
-    line-height: 1.6;
-}
+body { font-family: 'Segoe UI', sans-serif; background: var(--fond); margin: 0; color: #333; line-height: 1.6; }
+html { scroll-behavior: smooth; }
 
-/* --- 2. NAVIGATION --- */
-nav { 
-    background-color: var(--marine); 
-    padding: 15px; 
-    text-align: center; 
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-nav a { 
-    color: white; 
-    margin: 0 15px; 
-    text-decoration: none; 
-    font-weight: bold; 
-    transition: 0.3s;
-}
-nav a:hover { color: var(--or); }
+/* NAVIGATION */
+nav { background: var(--marine); padding: 15px 0; position: sticky; top: 0; z-index: 1000; }
+.nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+.logo { color: var(--or); font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+.nav-links a { color: white; margin-left: 20px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+.nav-links a:hover { color: var(--or); }
 
-/* --- 3. MISE EN PAGE (CONTENEURS) --- */
-.container { 
-    max-width: 850px; 
-    margin: 20px auto; 
-    padding: 0 15px; 
-}
-
-.card { 
-    background: white; 
-    padding: 25px; 
-    border-radius: 12px; 
-    margin-bottom: 20px; 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
-}
-
-.card-mini { 
-    background: white; 
-    padding: 15px; 
-    border-radius: 10px; 
-    margin-bottom: 15px; 
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08); 
-}
-
-/* --- 4. ACCUEIL (HERO SECTION AJUSTÉE) --- */
-.hero { 
-    background-color: var(--marine); 
-    color: white; 
-    padding: 50px 20px; 
-}
-.hero-flex { 
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; /* Pour mettre la photo à droite */
-    max-width: 850px; 
-    margin: 0 auto; 
-    gap: 30px;
-    flex-wrap: wrap; 
-}
-.hero-text { flex: 1; }
+/* HERO SECTION */
+.hero { background: var(--marine); color: white; padding: 60px 20px; }
+.hero-flex { display: flex; align-items: center; justify-content: space-between; max-width: 900px; margin: 0 auto; gap: 40px; }
 .hero-text h1 span { color: var(--or); }
+.img-circle-right { width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--or); object-fit: cover; }
 
-/* La photo en cercle à droite */
-.img-circle-right { 
-    width: 180px; 
-    height: 180px; 
-    border-radius: 50%; /* Cercle parfait */
-    border: 4px solid var(--or); 
-    object-fit: cover; 
-}
+/* COMPÉTENCES (Style Wireframe) */
+.card-skills, .card { background: white; padding: 30px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+.skills-container { display: flex; gap: 40px; flex-wrap: wrap; }
+.skill-column { flex: 1; min-width: 280px; }
+.skill-column h3 { color: var(--marine); border-bottom: 2px solid var(--or); padding-bottom: 5px; }
+.bar-bg { background: #eee; height: 10px; border-radius: 5px; margin: 10px 0; overflow: hidden; }
+.bar-fill { height: 100%; background: var(--or); transition: 1s ease-in-out; }
 
-/* --- 5. À PROPOS & FLEX --- */
-.flex-mini { 
-    display: flex; 
-    align-items: center; 
-    gap: 20px; 
-}
-.img-mini { 
-    width: 110px; 
-    height: 110px; 
-    border-radius: 10px; 
-    object-fit: cover; 
-    border: 2px solid var(--or); 
-}
+/* PROJETS */
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.project-item { background: white; padding: 20px; border-radius: 10px; border-bottom: 4px solid var(--or); text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
 
-/* --- 6. SYSTÈME DE JAUGES (JAUNE OR) --- */
-.progress-bg, .bar-mini-bg { 
-    background-color: #eeeeee; 
-    border-radius: 10px; 
-    overflow: hidden; 
-}
-.progress-bg { height: 14px; margin-top: 8px; }
-.bar-mini-bg { height: 8px; margin-top: 5px; }
+/* CONTACT WIREFRAME (Sombre) */
+.card-contact-wireframe { background: var(--marine); color: white; padding: 40px; border-radius: 15px; border: 1px solid var(--or); }
+.contact-header-theme h2 span, .contact-header-theme p span { color: var(--or); }
+.wireframe-form-theme label { color: var(--or); display: block; margin-bottom: 5px; font-size: 0.9rem; }
+.wireframe-form-theme input, .wireframe-form-theme textarea { width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 8px; border: 1px solid rgba(212,175,55,0.3); background: rgba(255,255,255,0.05); color: white; box-sizing: border-box; }
+.btn-contact-or { background: var(--or); color: var(--marine); padding: 12px 30px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; width: 100%; max-width: 200px; }
 
-.progress-bar, .bar-mini-fill { 
-    height: 100%; 
-    background-color: var(--or) !important; 
-    border-radius: 10px; 
-    transition: width 1s ease-in-out;
-}
-
-.finance { width: 90%; }
-.excel { width: 85%; }
-.web { width: 70%; }
-
-/* --- 7. BOUTONS INTERACTIFS --- */
-.btn-or { 
-    background-color: var(--or); 
-    color: var(--marine); 
-    padding: 10px 20px; 
-    border-radius: 5px; 
-    text-decoration: none; 
-    display: inline-block; 
-    font-weight: bold; 
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.btn-or:hover { 
-    background-color: white; 
-    transform: scale(1.05); /* Petit effet de zoom au survol */
-}
-
-.badge { 
-    display: inline-block; 
-    background-color: var(--or); 
-    color: var(--marine); 
-    padding: 4px 10px; 
-    border-radius: 20px; 
-    font-size: 0.8rem; 
-    font-weight: bold; 
-    margin-top: 10px; 
-}
-
+/* BOUTONS ET ACCENTS */
+.btn-or, .btn-cv-small, .btn-project { background: var(--or); color: var(--marine); padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; transition: 0.3s; border: none; }
+.btn-or:hover, .btn-cv-small:hover { background: white; transform: translateY(-2px); }
 .link-or { color: var(--or); text-decoration: none; font-weight: bold; }
 
-/* --- 8. FORMULAIRES & TITRES --- */
-.form-group { margin-bottom: 15px; }
-.form-group label { display: block; font-weight: bold; margin-bottom: 5px; }
-.form-group input, .form-group textarea { 
-    width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;
+/* FOOTER */
+.footer-wireframe { background: white; padding: 20px 0; border-top: 1px solid #eee; margin-top: 50px; text-align: center; }
+.footer-content span { color: var(--or); font-weight: bold; }
+.footer-contacts a { margin-left: 15px; color: var(--marine); text-decoration: none; font-weight: bold; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero-flex, .nav-container, .form-row { flex-direction: column; text-align: center; }
+    .nav-links { margin-top: 10px; }
+    .nav-links a { margin: 0 10px; }
 }
 
-.title-section { color: var(--marine); border-left: 4px solid var(--or); padding-left: 10px; margin-bottom: 15px; }
-.title-mini { color: var(--marine); border-bottom: 2px solid var(--or); padding-bottom: 5px; margin-bottom: 12px; }
 
-/* Responsive Mobile */
-@media (max-width: 600px) {
-    .hero-flex { flex-direction: column-reverse; text-align: center; }
-    .img-circle-right { margin-bottom: 20px; }
+
+
+
+
+:root {
+    --marine: #1a2a3a;
+    --or: #d4af37;
+    --fond: #f4f7f6;
+    --blanc: #ffffff;
+}
+
+body { font-family: 'Segoe UI', sans-serif; background: var(--fond); margin: 0; color: #333; line-height: 1.6; }
+
+/* 1. NAVIGATION (Identique partout) */
+nav { background: var(--marine); padding: 15px 0; position: sticky; top: 0; z-index: 1000; }
+.nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+.logo { color: var(--or); font-weight: bold; text-transform: uppercase; }
+.nav-links a { color: white; margin-left: 20px; text-decoration: none; font-weight: bold; }
+.nav-links a:hover { color: var(--or); }
+
+/* 2. ACCUEIL WIREFRAME (Ne pas toucher) */
+.hero { background: var(--marine); color: white; padding: 60px 20px; }
+.hero-flex { display: flex; align-items: center; justify-content: space-between; max-width: 900px; margin: 0 auto; }
+.img-circle-right { width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--or); object-fit: cover; }
+.card-contact-wireframe { background: var(--marine); color: white; padding: 40px; border-radius: 15px; border: 1px solid var(--or); margin-top: 30px; }
+.text-or { color: var(--or); }
+
+/* 3. STYLE PREMIUM (Pour les onglets À Propos et Contact uniquement) */
+.container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
+.card-premium { background: white; padding: 35px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 30px; }
+.about-flex-layout { display: flex; gap: 40px; align-items: center; }
+.img-propos-premium { width: 280px; height: 320px; object-fit: cover; border-radius: 12px; border: 4px solid var(--or); }
+.titre-souligne { color: var(--marine); border-bottom: 3px solid var(--or); display: inline-block; padding-bottom: 5px; margin-bottom: 20px; }
+.mon-badge-dore { display: inline-block; padding: 5px 15px; background: #fdf2d0; color: #947610; border-radius: 5px; border: 1px solid var(--or); font-weight: bold; }
+.btn-cv-accueil { background: var(--or); color: var(--marine); padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; }
+.btn-cv-accueil:hover { background: white; }
+
+/* Formulaire des onglets (sur fond blanc) */
+.form-premium-blanc input, .form-premium-blanc textarea { width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ddd; background: #f9f9f9; box-sizing: border-box; }
+.btn-envoi-premium { background: var(--or); color: var(--marine); padding: 12px 30px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; }
+
+@media (max-width: 768px) { .about-flex-layout, .hero-flex, .nav-container { flex-direction: column; text-align: center; } }
+
+
+
+
+
+
+
+
+
+
+
+/* --- PROTECTION ET STYLE DES ONGLETS (À PROPOS & CONTACT) --- */
+.card-premium {
+    background: white !important; /* Force le fond blanc */
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* L'ombre que tu aimes */
+    margin-bottom: 30px;
+    border-left: 6px solid #d4af37; /* Le trait doré à gauche */
+}
+
+.titre-souligne {
+    color: #1a2a3a;
+    border-bottom: 3px solid #d4af37;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.mon-badge-dore {
+    display: inline-block;
+    padding: 5px 15px;
+    background: #fdf2d0;
+    color: #947610;
+    border-radius: 5px;
+    border: 1px solid #d4af37;
+    font-weight: bold;
+}
+
+.form-premium-blanc input, .form-premium-blanc textarea {
+    width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; 
+    border-radius: 8px; background: #f9f9f9; box-sizing: border-box;
+}
+
+.btn-envoi-premium {
+    background: #d4af37; color: #1a2a3a; padding: 12px 30px; 
+    border: none; border-radius: 8px; font-weight: bold; cursor: pointer;
+}
+
+.btn-envoi-premium:hover { background: #1a2a3a; color: #d4af37; }
+
+
+
+
+
+
+
+
+
+
+/* --- STYLE PAGE PROJETS --- */
+
+.titre-principal-projets {
+    text-align: center;
+    color: #1a2a3a;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+/* Badge de catégorie (Bureautique, Finance, Digital) */
+.badge-categorie {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #fdf2d0;
+    color: #947610;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border: 1px solid #d4af37;
+}
+
+.date-lieu {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* Liste des tâches avec puces dorées */
+.liste-projets {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.liste-projets li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.liste-projets li::before {
+    content: "•";
+    color: #d4af37;
+    font-weight: bold;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+/* Espacement spécifique pour les titres H3 dans les projets */
+.card-premium h3 {
+    color: #1a2a3a;
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+/* --- STYLE GLOBAL DES CARTES PREMIUM --- */
+.card-premium {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+}
+
+.titre-souligne {
+    border-bottom: 3px solid #d4af37;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    color: #1a2a3a;
+}
+
+/* --- PHOTO ET PRÉSENTATION --- */
+.about-flex-layout { display: flex; gap: 30px; align-items: center; flex-wrap: wrap; }
+.img-propos-premium { width: 220px; border-radius: 12px; border: 4px solid #d4af37; object-fit: cover; }
+.mon-badge-dore { display: inline-block; padding: 5px 15px; background: #fdf2d0; color: #947610; border-radius: 5px; font-weight: bold; }
+
+/* --- JAUGES DORÉES --- */
+.skill-container { margin-bottom: 15px; }
+.skill-info { display: flex; justify-content: space-between; font-weight: bold; margin-bottom: 5px; }
+.progress-bar-bg { background: #eee; height: 10px; border-radius: 5px; overflow: hidden; }
+.progress-bar-fill { background: #d4af37; height: 100%; border-radius: 5px; }
+
+/* --- LISTES ET PUCES --- */
+.liste-simple, .liste-interets { list-style: none; padding: 0; }
+.liste-simple li, .liste-interets li { margin-bottom: 12px; display: flex; align-items: flex-start; }
+.puce-dorée { width: 8px; height: 8px; background: #d4af37; border-radius: 50%; margin-right: 12px; margin-top: 6px; flex-shrink: 0; }
+
+
+
+footer {
+    text-align: center;
+    padding: 25px 0;
+    background-color: #ffffff; /* Fond blanc propre comme le prof */
+    color: #1a2a3a;           /* Votre bleu nuit pour le texte de base */
+    font-size: 0.95rem;
+    border-top: 1px solid #f0f0f0; 
+}
+
+.mon-nom-dore {
+    color: #d4af37;           /* Votre doré signature */
+    font-weight: bold;        /* Pour que votre nom ressorte bien */
 }

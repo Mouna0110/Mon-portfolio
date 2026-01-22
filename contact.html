@@ -3,59 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Mouna Martine Djédjé LAGO</title>
+    <title>Contact - Mouna Martine LAGO</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
-        <a href="index.html">Accueil</a>
-        <a href="propos.html">À propos</a>
-        <a href="projets.html">Projets</a>
-        <a href="contact.html">Contact</a>
+        <div class="nav-container">
+            <div class="logo">MOUNA MARTINE LAGO</div>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="propos.html">À propos</a>
+                <a href="projets.html">Projets</a>
+                <a href="index.html#competences">Compétences</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
     </nav>
 
     <div class="container">
-        <h1 class="page-title">Me contacter</h1>
-
-        <section class="card-mini">
-
-        <h3 class="title-mini">Coordonnées</h3>
-            <div class="contact-list">
-                <p><strong>📍 Localisation :</strong> Yopougon, Abidjan, Côte d'Ivoire</p>    
-                <p><strong>📧 Email :</strong>     <a href="mailto:mounalago7@gmail.com" class="link-or">mounalago7@gmail.com</a>               </p>    
-                <p><strong>📞 Téléphone :</strong> +225 07 88 25 98 02 / 01 73 81 80 86</p>
-            </div>                                        
-            
-            <span class="badge">Disponible</span>
-        </section>
-
-        <section class="card-mini">
-            <h3 class="title-mini">Réseaux Sociaux</h3>
-            <div class="contact-list">
-            <p><strong>LinkedIn :</strong> <a href=" " target="_blank" class="link-or">Mouna LAGO </a></p>
-            <p><strong>GitHub :</strong> <a href="https://mouna0110.github.io/Mon-portfolio/propos.html" target="_blank" class="link-or">https://mouna0110.github.io/Mon-portfolio/propos.html</a></p>
+        <div class="card-premium">
+            <h2 class="titre-souligne">Coordonnées</h2>
+            <div class="infos-anciennes-liste">
+                <p>📍 <strong>Localisation :</strong> Yopougon, Abidjan, Côte d'Ivoire</p>
+                <p>📧 <strong>Email :</strong> <a href="mailto:mounalago7@gmail.com" class="lien-or">mounalago7@gmail.com</a></p>
+                <p>📞 <strong>Téléphone :</strong> +225 07 88 25 98 02 / 01 73 81 80 86</p>
             </div>
-            <span class="badge">Professionnel</span>
-        </section>
+            <span class="mon-badge-dore">Disponible</span>
+        </div>
 
-        <section class="card-mini">
-            <h3 class="title-mini">Envoyer un message</h3>
-            <form class="contact-form">
-                <div class="form-group">
-                    <label>Nom Complet</label>
-                    <input type="text" placeholder="Votre nom et prénom">
+        <div class="card-premium">
+            <h2 class="titre-souligne">Envoyez un message</h2>
+            <form class="form-premium-blanc">
+                <div class="form-row" style="display: flex; gap: 10px;">
+                    <input type="text" placeholder="Votre prénom" style="flex: 1;">
+                    <input type="text" placeholder="Votre nom" style="flex: 1;">
                 </div>
-                <div class="form-group">
-                    <label>Votre Email</label>
-                    <input type="email" placeholder="votre@email.com">
+                <input type="text" placeholder="Objet de votre message">
+                <textarea placeholder="Bonjour Mouna..." rows="5"></textarea>
+                <div style="text-align: center;">
+                    <button type="submit" class="btn-envoi-premium">Envoyer le message</button>
                 </div>
-                <div class="form-group">
-                    <label>Message</label>
-                    <textarea placeholder="Bonjour Mouna, j'aimerais vous contacter pour..."></textarea>
-                </div>
-                <button type="submit" class="btn-or">Envoyer le message</button>
+            </form>
+        </div>
+    </div>
             </form>
         </section>
     </div>
+
+    <footer class="footer-wireframe">    
+    <div class="footer-content">    
+                <p>Designed by <span>Mouna Martine LAGO</span> with HTML CSS JS</p>
+            <div class="footer-contacts">
+                <a href="mailto:mounalago7@gmail.com">Email</a>
+                <a href="https://github.com/mouna01111" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
 </body>
-</html>         
+</html>
